@@ -16,8 +16,8 @@ on:
   push:
     branches:
       - master
-  schedule:
-    - cron: 0 */12 * * *
+  #schedule:
+  #  - cron: 0 */12 * * *
   watch:
     types: started
 
@@ -95,14 +95,14 @@ jobs:
           CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_PDNSD=n
           CONFIG_PACKAGE_luci-app-upnp=y
           # CONFIG_PACKAGE_luci-app-eqos=y
-          CONFIG_PACKAGE_luci-app-easymesh=y  
-          CONFIG_PACKAGE_luci-app-mwan3=y
-          CONFIG_PACKAGE_luci-app-mwan3helper=y
-          CONFIG_PACKAGE_luci-app-syncdial=y
-          CONFIG_PACKAGE_luci-app-ramfree=n
+          CONFIG_PACKAGE_luci-app-easymesh=n  
+          CONFIG_PACKAGE_luci-app-mwan3=n
+          CONFIG_PACKAGE_luci-app-mwan3helper=n
+          CONFIG_PACKAGE_luci-app-syncdial=n
+          CONFIG_PACKAGE_luci-app-ramfree=y
           CONFIG_PACKAGE_luci-app-ssr-plus=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Client=n
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Simple_Obfs=n
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Client=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Simple_Obfs=y
           EOF
 
           sed -i 's/^[ \t]*//g' ./.config
